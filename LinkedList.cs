@@ -49,6 +49,19 @@ namespace LinkedList
                 head.next = newNode;//56->30->70
             }
         }
-        
+        internal void Display()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            while (temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+            }
+        }
     }
 }
