@@ -63,5 +63,36 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        ///<summary>
+        ///UC-4
+        ///</summary>
+        ///<param name="position"></param>
+        ///<param name="data"></param>
+        ///<return></return>
+        internal void InsertAtParticularPosition(int position, int data)//56->30
+        {
+            Node newestNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newestNode;
+            }
+            if (position == 0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+                return;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newestNode.next = prev.next;
+            prev.next = newestNode;
+        }
     }
 }
