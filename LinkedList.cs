@@ -127,5 +127,24 @@ namespace LinkedList
             }
             NewNode.next = null;
         }
+        ///<summary>
+        ///UC-7
+        ///</summary>
+        ///<param name="value"></param>
+        ///<returns></returns>
+        internal void Search(int value)
+        {
+            Node node = this.head;
+            int count = 0;
+            while (node != null)
+            {
+                if (node.data.Equals(value))
+                {
+                    Console.WriteLine(count);
+                }
+                node = node.next;
+                count++;
+            }
+        }
     }
 }
