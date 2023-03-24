@@ -94,5 +94,17 @@ namespace LinkedList
             newestNode.next = prev.next;
             prev.next = newestNode;
         }
+        ///<summary>
+        ///UC-5
+        ///</summary>
+        ///<param name="data"></param>
+        internal void RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            this.head = this.head.next;
+        }
     }
 }

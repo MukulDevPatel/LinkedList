@@ -8,9 +8,8 @@ namespace LinkedList
         {
             LinkedList list = new LinkedList();
             list.Add(70);
-            list.Add(56);
-            list.Display();
-            list.InsertAtParticularPosition(1,30);
+            list.Add(30);
+            list.RemoveFirstNode();
             list.Display();
         }
     }
