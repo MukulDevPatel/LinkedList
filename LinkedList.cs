@@ -128,11 +128,11 @@ namespace LinkedList
             NewNode.next = null;
         }
         ///<summary>
-        ///UC-7
+        ///UC-7,UC-8
         ///</summary>
         ///<param name="value"></param>
         ///<returns></returns>
-        internal void Search(int value)
+        internal int Search(int value)
         {
             Node node = this.head;
             int count = 0;
@@ -141,10 +141,12 @@ namespace LinkedList
                 if (node.data.Equals(value))
                 {
                     Console.WriteLine(count);
+                    return count;
                 }
                 node = node.next;
                 count++;
             }
+            return count;
         }
     }
 }
