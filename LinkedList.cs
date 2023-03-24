@@ -148,5 +148,31 @@ namespace LinkedList
             }
             return count;
         }
+        ///UC-9
+        internal void DeleteNodeAtParticuarPosition(int position)//2
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            Node temp = this.head;//56,30,40,70
+            if (position == 0)
+            {
+                this.head = temp.next;
+                return;
+            }
+            for (int i = 0; temp != null && i < position - 1; i++)
+            {
+                temp = temp.next;
+            }
+            if (temp == null || temp.next == null)
+            {
+                return;
+            }
+            Node next = temp.next.next;
+            temp.next = next;
+            //size();
+        }
     }
 }
