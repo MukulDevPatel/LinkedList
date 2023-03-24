@@ -10,6 +10,7 @@ namespace LinkedList
             list.Add(70);
             list.Add(30);
             list.Add(56);
+            list.AddInReverseOrder(56);
         }
     }
 }
