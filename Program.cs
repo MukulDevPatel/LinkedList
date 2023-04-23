@@ -29,6 +29,15 @@ namespace LinkedList
             stack.Peek();
             stack.Pop();
             stack.Display();
+
+            LinkeListQueue queue = new LinkeListQueue();
+            queue.Enqueue(70);
+            queue.Enqueue(30);
+            queue.Enqueue(56);
+            queue.Enqueue(40);
+            queue.Display();
+            queue.Dequeue();
+            queue.Display();
         }
 
         //BST - Binary Search Tree
