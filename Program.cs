@@ -19,6 +19,16 @@ namespace LinkedList
             list.Display();
             list.Size();
             list.Display();
+
+
+            LinkedListStack stack = new LinkedListStack();
+            stack.Push(56);
+            stack.Push(70);
+            stack.Push(30);
+            stack.Display();
+            stack.Peek();
+            stack.Pop();
+            stack.Display();
         }
 
         //BST - Binary Search Tree
